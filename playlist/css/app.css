@@ -1,0 +1,330 @@
+    /*
+    autor: Victor Camara Lessa
+    v: 0.1;
+    */
+    body{
+      
+        width: 100%;
+        background:linear-gradient(-50deg,#c401e4,#390361);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        font-family: Helvetica,Arial,sans-serif;
+        overflow-x: hidden;
+      
+    }
+    .nav a.active{
+      font-weight: 600;
+      color: purple;
+    }
+    .fundo-conteudo{
+      background-color: white;
+    }
+    .home-tab{
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+      }
+      .row.content {height: 100vh;
+      }
+      .sidenav {
+        padding-top: 20px;
+        height: 100vh;
+        padding-left: 0;
+        padding-right: 0; 
+      }
+      .sidenav1 {
+        padding-top: 20px;
+        height: 100vh; 
+      }
+      .nav{
+        flex-direction: column;
+        padding: 0;
+      }
+      .nav a{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 0;
+        padding-right:0;
+        color: white;
+        width: 100%;  
+      }
+      footer {
+        background-color: #555;
+        color: white;
+        padding: 15px;
+      }
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+      }
+    .row.content {height:auto;
+      } 
+  }
+  .aba-menu{
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .aba-menu ul{
+    width: 100%;
+  }
+  .logo{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .logo img{
+    width: 180px;
+  }
+  .user{
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+  }
+  .user>.perfil{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: red;
+  }
+
+  .nomeuser span{
+    color: white;
+    margin-left: 10px;
+  }
+
+  /*conteudo*/
+  .playlist{
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+  .banner{
+    margin: 20px;
+    background: blue;
+    border: 1px solid #e8e8ec;
+    text-align: left;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  .banner img{
+    width: 50%;
+  }
+  .sugestao{
+    text-align: center;
+  }
+  .bar-navegar{
+    padding: 0;
+  }
+  .bar-navegar h2{
+    margin-left: 50px;
+  }
+  .navegar{
+    display: inline-flex;
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .navegar li{
+    width: 200px;
+    height: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    border-radius: 3px;
+    background: gray;
+  }
+  /*sidbar*/
+  .well{
+    height: 300px;
+    padding: 0;
+    overflow-y: scroll;
+    background-color: white;
+    border-radius: 2px;
+    margin: 10px;
+
+  }
+  .chat{
+    display: inline-flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    cursor: pointer;
+  }
+  .chat:hover{
+    background-color: gray;
+    transition: .6s;
+  }
+  .photouser{
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 100%;
+  }
+  .nameuser{
+    color: black;
+    margin-left: 10px;
+    font-weight: 600;
+  }
+  /*barra musica*/
+  .barra-music{
+    bottom: 0;
+    z-index: 2;
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 10px;
+  }
+  .music{
+    background-color: #0665a2;
+    height: 510px;
+    overflow: hidden;
+  }
+  .tab-content{
+    width: 100%;
+  }
+  /*lista chat*/
+  .lista-chat{
+    background-color: white;
+    height: 100vh;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .conversa{
+    padding: 20px;
+    height: 100vh;
+    background: white;
+    margin-right: -15px;
+  }
+  .amigo-lista-chat{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  .lista-chat-photo{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: blue;
+  }
+  .name-lista-chat h4{
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
+  /*room*/
+.header{
+  width: 100%;
+  height: 7vh;
+  display: inline-flex;
+  align-items: center;
+  background: blanchedalmond;
+  border-radius: 5px 5px 0 0;
+  padding-left: 10px;
+}
+.photoroom{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: blue;
+}
+.nameroom h4{
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+.messages{
+  height: 83vh;
+  width: 100%;
+  overflow: scroll;
+  background: lightsteelblue;
+}
+.room{
+  height: 100vh;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 20px;
+  padding-bottom:20px;
+  overflow-y: scroll;
+  text-align: left;
+}
+footer{
+  border-radius:0 0 5px 5px;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px;
+  display: flex;
+  background: blanchedalmond;
+  justify-content: center;
+  height: 5vh;
+}
+.input-group{
+  width: 50%;
+}
+.msn-left{
+  text-align: left;
+  width: 40%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background: beige;
+}
+.msn-left p{
+  margin: 0;
+}
+.msn-right{
+  float: right;
+  text-align: right;
+  width: 40%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background: beige;
+}
+.msn-right p{
+  margin: 0;
+}
+/*playlist*/
+.playlistsala{
+  overflow: scroll;
+}
+.musica{
+  text-align: left;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  border-bottom: 1px solid gray;
+}
+.photo-album img{
+  width: 100%;
+}
+.info{
+  text-align: left;
+}
+.myplaylist{
+  padding-top: 50px; 
+}
+/*medias queries */
+@media screen (max-width:767px){
+.banner{
+  text-align: left;
+}
+}

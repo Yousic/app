@@ -1,0 +1,111 @@
+/*
+* 
+* @author Victor Camara Lessa
+* @version 0.1
+*/
+/* varela-round-regular - latin */
+
+@font-face {
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/varela-round-v9-latin-regular.woff'); /* IE9 Compat Modes */
+}
+body {
+    width: 100%;
+    background: url('imagens/background.jpg'),
+                url('imagens/ruido.png'),
+                linear-gradient(-50deg,#c401e4,#390361);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    font-family: Helvetica,Arial,sans-serif;
+    overflow-x: hidden;
+}
+.titulo{
+    text-align: center;
+    color: white;
+    margin-bottom: 150px;
+}
+.team{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.scrol{
+	font-weight: 600;
+}
+.time{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.squad{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 20px 100px;
+}
+.fundo-squad{
+    width: 300px;
+    height: 300px;
+    border-radius: 4px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.habilidade{
+    text-align: center;
+    height: 150px;
+
+}
+.habilidade strong{
+    font-size: 19px;
+}
+.perfil{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -100px; 
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background: red;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.perfil img{
+    width: 200%;
+}
+.link{
+    bottom: 0;
+}
+.link i{
+    font-size: 30px;
+}
+.link a{
+    color: black;
+}
+.link a:hover{
+    transition: .6s;
+    color:purple;
+}
+/* md */
+@media screen and (max-width: 1200px) {
+.time{
+    height: auto;
+    padding: 100px 10px;
+}
+}
+h1{ 
+    font-family: Varela Round;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+}

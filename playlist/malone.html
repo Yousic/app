@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yousic - Música em todo lugar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../imagens/favicon1.png">
+  <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../estilo.css" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+  <link rel="stylesheet" type="text/css" href="css/playlist.css">
+  
+</head>
+<body> 
+    <nav class="navbar navbar-fixed-top navbar-inverse navbar-transparente">
+        <div class="container">
+          
+          <!-- header -->
+          <div class="navbar-header">
+            
+            <!-- botao toggle -->
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#barra-navegacao">
+              <span class="sr-only">alternar navegação</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+  
+            <a href="../index.html" class="navbar-brand img-logo">
+              <img src="../imagens/SVG/logo.svg">
+            </a>
+  
+          </div>
+  
+          <!-- navbar -->
+          <div class="collapse navbar-collapse" id="barra-navegacao">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="../index.html" class="scrol" >Home</a></li>
+              <li class="divisor"></li>
+              <li><a href="" class="baixar" style="color:blueviolet">Baixar</a></li>
+          </div>
+        </div><!-- /container -->
+    </nav>
+    <!-- /nav -->
+<div class="container-fluid text-center"> 
+  
+  <div class="row content">
+    <div class="col-sm-12 room">
+      <div class="background" style="background-image: url(https://images3.alphacoders.com/884/884272.jpg)"></div>
+      <section>
+        <div id="jquery_jplayer" style="position: absolute; top: 0px; left: -9999px;">
+            <audio id="jqjp_audio_0" preload="none" src="songs/human-after-all.mp3"></audio>
+  
+            <div id="jqjp_force_0" style="text-indent: -9999px;">0.3245763930026442</div>
+        </div>
+        <div class="album-info jp-playlist-player">
+          
+            <ul class="jp-controls">
+              <li class="album-art"><img src="fotosalbuns/postmalone.jpg"/>
+                <div class="actions">
+                  <div class="play">
+                    <div><a id="jplayer_play" title="executar">Play</a></div>
+                    <div><a id="jplayer_pause">Pausar</a></div>
+                  </div>
+                  <div class="bookmark">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#faa800" height="24" viewbox="0 0 24 24" width="24">
+                      <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          
+          <div class="album-details">
+            <h1>Post Malone</h1><span> <span>Hip-hop </span><span>&copy; 2018 Republic Records</span></span>
+            <p>Post Malone, nome artístico de Austin Richard Post, é um rapper, cantor, compositor e produtor musical norte-americano. Ele ganhou reconhecimento em fevereiro de 2015, quando lançou seu single de estreia, "White Iverson".</p>
+          </div>
+          <div class="progresso" >
+            <div id="jplayer_load_bar" style="width: 0%" class="load-bar">
+              <div id="jplayer_play_bar" class="play-bar" style="width: 0%;"></div>
+            </div>
+          </div>
+        </div>
+          <div id="jplayer_playlist" class="album-tracks jp-playlist">
+            <ol class="lista">
+                
+                
+            </ol>
+          </div>
+      </section>
+    </div>
+  </div>
+</div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script type="text/JavaScript" src="js/jquery.jplayer.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="../bootstrap/js/bootstrap.min.js"></script>
+<script type="text/JavaScript">
+
+       
+     $(document).ready(function(){
+          
+
+             // Variável responsável por guardar o item atual de execução
+           var playItem = 0;
+ 
+           /*
+                  Lista com todas as músicas a serem executadas na playlist.
+                  Em uma aplicação dinâmica, os valores provavelmente serão montados a partir de uma linguagem server side.
+           */
+           var minhaPlayList = [
+                  {name:"Congratulations", mp3:"https://sites.google.com/site/musicasferdg4/vegfef/Congratulations%20ft%20Quavo.mp3"},
+                  {name:"Go Flex", mp3:"https://sites.google.com/site/musicasferdg4/vegfef/Go%20Flex.mp3"},
+                  {name:"Psycho ft Ty Dolla ign", mp3:"https://sites.google.com/site/musicasferdg4/vegfef/Psycho%20ft%20Ty%20Dolla%20ign.mp3"},
+                  {name:"Too Young", mp3:"https://sites.google.com/site/musicasferdg4/vegfef/Too%20Young.mp3"},
+                  {name:"Rockstar", mp3:"https://sites.google.com/site/musicasferdg4/vegfef/rockstar%20ft%2021%20Savage.mp3"}
+           ];
+ 
+           /* Cópias locais para os seletores jQuery, apenas para performance */
+           // Guarda o tempo atual de execução
+           var jpTempoExecucao = $("#jplayer_tempo_execucao");
+           // Guarda o tempo total de execução
+           var jpTempoTotal = $("#jplayer_tempo_total");
+ 
+           // Função de criação e configuração do player.
+           $("#jquery_jplayer").jPlayer({
+                  ready: function() {
+                         exibirPlayList();
+                         playListInit(false); // Parâmetro é um para autoplay.
+                  },
+                  oggSupport: false
+           })
+            // Configurações gerais do player
+           .jPlayer("onProgressChange", function(loadPercent, playedPercentRelative, playedPercentAbsolute, playedTime, totalTime) {
+                  jpTempoExecucao.text($.jPlayer.convertTime(playedTime));
+                  jpTempoTotal.text($.jPlayer.convertTime(totalTime));
+           })
+           .jPlayer("onSoundComplete", function() {
+                  playListProximo();
+           });
+ 
+           // Captura o evento de clique para o botão de anterior
+           $("#jplayer_anterior").click(function() {
+                  playListAnterior();
+                  $(this).blur();
+                  return false;
+           });
+ 
+           // Captura o evento de clique para o botão de próximo
+           $("#jplayer_proximo").click(function() {
+                  playListProximo();
+                  $(this).blur();
+                  return false;
+           });
+ 
+           // Método interno de montagem e exibição da playlist
+           function exibirPlayList() {
+            
+                  $("#jplayer_playlist ol").empty();
+                  for (i=0; i < minhaPlayList.length; i++) {
+                         var listItem = (i == minhaPlayList.length-1) ? "<li class='jplayer_playlist_ultimo_item'>" : "<li>";
+                         listItem += "<a href='#' id='jplayer_playlist_item_"+i+"' tabindex='1'><span>"+ minhaPlayList[i].name +"</span></a></li>";
+                         $("#jplayer_playlist ol").append(listItem);
+                         $("#jplayer_playlist_item_"+i).data("index", i).click(function() {
+                                var index = $(this).data("index");
+                                if (playItem != index) {
+
+                                      mudarPlayList(index);
+                                } else {
+                                      $("#jquery_jplayer").jPlayer("play");
+
+                                }
+                                $(this).blur();
+                                return false;
+                         });
+                         $("#jplayer_playlist_get_mp3_"+i).data("index", i).click(function() {
+                                var index = $(this).data("index");
+                                $("#jplayer_playlist_item_"+index).trigger("click");
+                                $(this).blur();
+                                return false;
+                         });
+                  }
+           }
+            exibirPlayList();
+           // Inicializa a playlist
+           function playListInit(autoplay) {
+                 if(autoplay) {
+                         mudarPlayList(playItem);
+                  } else {
+                         playListConfig(playItem);
+                  }
+           }
+ 
+           // Configura a playlist (quando a mesma não está por padrão como autoplay)
+            function playListConfig(index) {
+                   $("#jplayer_playlist_item_"+playItem).removeClass("jplayer_playlist_current").parent().removeClass("jplayer_playlist_current");
+                  $("#jplayer_playlist_item_"+index).addClass("jplayer_playlist_current").parent().addClass("jplayer_playlist_current");
+                   playItem = index;
+                   $("#jquery_jplayer").jPlayer("setFile", minhaPlayList[playItem].mp3, minhaPlayList[playItem].ogg);
+            }
+  
+            function mudarPlayList(index) {
+                   playListConfig(index);
+                   $("#jquery_jplayer").jPlayer("play");
+            }
+  
+            // Executa a próxima faixa
+            function playListProximo() {
+                   var index = (playItem+1 < minhaPlayList.length) ? playItem + 1 : 0;
+                   mudarPlayList(index);
+            }
+  
+            // Executa a faixa anterior
+            function playListAnterior() {
+                   var index = (playItem-1 >= 0) ? playItem-1 : minhaPlayList.length-1;
+                   mudarPlayList(index);
+            }
+      });
+    function play(){
+      document.getElementById('jplayer_play').style.display = "block";
+
+    }
+    
+      </script>
+</body>
+</html>
+ 
