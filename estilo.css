@@ -79,13 +79,13 @@ nav.navbar-transparente {
 }
 
 .navbar-inverse .navbar-nav>li>a, footer .nav a {
-	color: #93278f;
+	color: white;
 	font-family: Varela Round;
 	transition: .2s;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover, footer .nav a:hover {
-	color: #c401e4;
+	color: #93278f;
 	background: none;
 	transition: .4s;
 }
