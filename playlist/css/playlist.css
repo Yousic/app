@@ -241,7 +241,7 @@ ol li span:first-child:before {
   background: gray;
 }
 .lista li a.jplayer_playlist_current{
-  color: skyblue;
+  color: #93278f;
 }
 .lista li a{
   color: white;
