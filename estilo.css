@@ -131,7 +131,15 @@ nav.navbar-transparente {
 	font-size: 20px;
     font-family: Varela Round;
 }
-
+.btn-success{
+	background-color: #92378f;
+	border: none;
+	font-family: Varela Round;
+}
+.btn-success:hover{
+	background-color: purple;
+	border: none;
+}
 .btn-roxo {
 	background: #7c25f8;
 
@@ -262,6 +270,9 @@ h1 {
 	font-weight: 550;
 	margin: 1em 0 2.5em;
 	font-size: 18px;
+}
+.plan_vantagens li{
+	font-family: Varela Round;
 }
 /* Media queries */
 /* xs < 768 */
