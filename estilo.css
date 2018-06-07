@@ -128,12 +128,21 @@ nav.navbar-transparente {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 23px;
+	font-size: 20px;
     font-family: Varela Round;
 }
-
+.btn-success{
+	background-color: #92378f;
+	border: none;
+	font-family: Varela Round;
+}
+.btn-success:hover{
+	background-color: purple;
+	border: none;
+}
 .btn-roxo {
 	background: #7c25f8;
+
 }
 .btn-roxo:hover {
 	background-color: #6207e3;
@@ -260,7 +269,10 @@ h1 {
 .coment{
 	font-weight: 550;
 	margin: 1em 0 2.5em;
-	font-size: 18px;
+	font-size: 16px;
+}
+.plan_vantagens li{
+	font-family: Varela Round;
 }
 /* Media queries */
 /* xs < 768 */
@@ -278,7 +290,7 @@ h1 {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 17px;
+		font-size: 13px;
 		font-family: Varela Round;
 	}
 	h1 {
